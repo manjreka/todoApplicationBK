@@ -1,0 +1,68 @@
+//API 1 
+
+// **** scinerio 1 ****
+GET http://localhost:3000/todos/?status=TO%20DO   
+###
+
+// **** scinerio 2 ****
+GET http://localhost:3000/todos/?priority=HIGH
+
+###
+// **** scinerio 3 ****
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+
+
+###
+// **** scinerio 4 ****
+GET http://localhost:3000/todos/?search_q=Play
+
+
+###
+//API 2
+
+GET http://localhost:3000/todos/2/
+
+
+###
+//API 3 
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 14,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+//API 4 
+
+###
+// **** scinerio 1 ****
+PUT  http://localhost:3000/todos/3
+Content-Type: application/json   
+
+{ "status": "DONE" }
+
+
+###
+// **** scinerio 2 ****
+PUT http://localhost:3000/todos/1
+Content-Type: application/json
+
+{ "priority": "HIGH" }
+
+
+###
+// **** scinerio 3 ****
+PUT http://localhost:3000/todos/2
+Content-Type: application/json
+
+{ "todo": "Some task" }
+
+
+//API 5 
+
+###
+DELETE  http://localhost:3000/todos/10/
+
